@@ -1,0 +1,1 @@
+export function validateImage(file:File):string|null {if(!['image/jpeg','image/png','image/webp'].includes(file.type))return 'Please choose a JPG, PNG, or WEBP image.';if(file.size>15*1024*1024)return 'Your photo is too large. Please choose one under 15 MB.';if(!file.size)return 'This file is empty. Please choose another photo.';return null;}

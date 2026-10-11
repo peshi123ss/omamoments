@@ -1,0 +1,3 @@
+import {Organization} from './components/Organization';
+import {Header} from './components/Header';import {Hero} from './components/Hero';import {FrameEditor} from './components/FrameEditor';import {Footer} from './components/Footer';import {useBrandAssets} from './hooks/useBrandAssets';
+export default function App(){const brand=useBrandAssets();return <><a className="skip-link" href="#create">Skip to frame generator</a><Header/><main><Hero brand={brand}/><div className="campaign-strip"><span>ONE COMMUNITY.</span><span>FIVE YEARS OF IMPACT.</span><span>COUNTLESS STORIES.</span><span>YOURS IS ONE OF THEM.</span></div><FrameEditor brand={brand}/><Organization/></main><Footer/></>;}

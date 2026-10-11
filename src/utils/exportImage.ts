@@ -1,0 +1,3 @@
+import type Konva from 'konva';
+export async function exportImage(stage:Konva.Stage):Promise<Blob>{await document.fonts.ready;stage.draw();const scale=stage.scaleX();return new Promise((resolve,reject)=>{try {stage.toCanvas({pixelRatio:1/scale}).toBlob(blob=>blob?resolve(blob):reject(new Error('PNG export failed. Please try again.')),'image/png');}catch(e){reject(e);}});}
+export function downloadBlob(blob:Blob,name:string){const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}

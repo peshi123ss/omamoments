@@ -1,0 +1,2 @@
+import { Download, LoaderCircle } from 'lucide-react';
+export function DownloadButton({disabled,busy,onClick}:{disabled:boolean;busy:boolean;onClick:()=>void}){return <button type="button" className="button primary download-button" disabled={disabled||busy} onClick={onClick}>{busy?<LoaderCircle size={19} className="spin"/>:<Download size={19}/>} {busy?'Creating your PNG…':'Download My Anniversary Frame'}</button>;}

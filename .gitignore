@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.zip
+.openai/*.local.json
+test-results/
+*.tsbuildinfo
